@@ -17,7 +17,7 @@ class ListingController extends Controller
             // 'heading' => 'Latest Listing',
             // using latest we got latest from first to last 
             // we pass filter from listing models and we create array there so pass tag into array
-            'listings' => Listing::latest()->filter(request(['tag']))->get()
+            'listings' => Listing::latest()->filter(request(['tag','search']))->paginate(6)
         ]);
     }
 
