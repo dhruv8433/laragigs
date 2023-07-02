@@ -9,7 +9,7 @@ class Listing extends Model
 {
     use HasFactory;
 
-    // protected $filelable = ['title', 'company', 'location', 'website', 'email','description', 'tags'];
+    protected $filelable = ['title', 'company', 'location', 'website', 'email','description', 'tags'];
 
     public function scopeFilter($query, array $filters) {
         // ?? -> null coalescing opeator it means if that is not false then ...
